@@ -29,13 +29,13 @@ class EmergingButtonAnimatorOverlappingImageTests: XCTestCase {
     }
     
     func testOverlappingImageReturnsSelectedImage() throws {
-        let set = TestEmergingButtonAnimatorButton(selectedImage: UIImage(named: "flower_on"), unselectedImage: UIImage(named: "flower_off"))
+        let set = TestEmergingButtonAnimatorButton(selectedImage: UIImage.getImage(named: "flower_on"), unselectedImage: UIImage.getImage(named: "flower_off"))
         let selectedImageToOverlap = set.getOverlappingImage(for: .selected)
         XCTAssertTrue(selectedImageToOverlap.image == set.image(for: .selected))
     }
     
     func testOverlappingImageReturnsUnselectedImage() throws {
-        let set = TestEmergingButtonAnimatorButton(selectedImage: UIImage(named: "flower_on"), unselectedImage: UIImage(named: "flower_off"))
+        let set = TestEmergingButtonAnimatorButton(selectedImage: UIImage.getImage(named: "flower_on"), unselectedImage: UIImage.getImage(named: "flower_off"))
         let selectedImageToOverlap = set.getOverlappingImage(for: .normal)
         XCTAssertTrue(selectedImageToOverlap.image == set.image(for: .normal))
     }
