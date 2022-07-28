@@ -9,12 +9,12 @@ import UIKit
 
 protocol EmergingButtonAnimatable: ButtonEmergible where AnimationConfig == ButtonAnimatorConfig { }
 
-enum ButtonAnimatorConfig {
+public enum ButtonAnimatorConfig {
     case expandAnimation(isSelected: Bool, duration: ButtonAnimatingSpeed)
     case fillUpAnimation(isSelected: Bool, duration: ButtonAnimatingSpeed)
 }
 
-enum ButtonAnimatingSpeed {
+public enum ButtonAnimatingSpeed {
     case fast
     case slow
 }

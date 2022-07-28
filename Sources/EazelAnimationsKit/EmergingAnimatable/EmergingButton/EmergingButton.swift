@@ -7,12 +7,12 @@
 
 import UIKit
 
-class EmergingButton: UIButton, EmergedButton {
+public class EmergingButton: UIButton, EmergedButton {
     
     var imageForNormalState: UIImage?
     var imageForSelectedState: UIImage?
     
-    init(frame: CGRect = .zero,
+    public init(frame: CGRect = .zero,
          unselectedImage: UIImage? = nil,
          selectedImage: UIImage? = nil) {
         self.imageForNormalState = unselectedImage
