@@ -9,3 +9,4 @@ import UIKit
 
 typealias EmergedButton = EmergingButtonAnimatable & EmergingButtonSetter
 typealias ButtonEmergible = EmergingButtonAnimator & EmergingAnimatable
+ 
