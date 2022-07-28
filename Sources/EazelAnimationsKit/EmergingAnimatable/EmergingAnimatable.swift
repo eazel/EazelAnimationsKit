@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol EmergingAnimatable {
+public protocol EmergingAnimatable {
     associatedtype AnimationConfig
     
     func animate(with config: AnimationConfig)
