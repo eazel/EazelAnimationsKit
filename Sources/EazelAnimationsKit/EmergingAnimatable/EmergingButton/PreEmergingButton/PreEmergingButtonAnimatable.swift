@@ -17,6 +17,11 @@ public enum PreEmergingButtonAnimatorConfig {
 public struct PreEmergingButtonDuration {
     let startAnimating: TimeInterval
     let finishAnimating: TimeInterval
+    
+    public init(startAnimating: TimeInterval, finishAnimating: TimeInterval) {
+        self.startAnimating = startAnimating
+        self.finishAnimating = finishAnimating
+    }
 }
 
 extension PreEmergingButtonAnimatable {
