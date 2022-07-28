@@ -20,7 +20,7 @@ public enum ButtonAnimatingSpeed {
 }
 
 extension EmergingButtonAnimatable {
-    func animate(with config: AnimationConfig) {
+    public func animate(with config: AnimationConfig) {
         switch config {
         case .expandAnimation(let isSelected, _):
             guard let expandAnimationDuration = self.prepareAnimation(for: config) as? ExpandAnimationDuration else { return }
