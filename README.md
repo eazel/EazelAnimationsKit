@@ -1,5 +1,8 @@
 # EazelAnimationsKit
-<img alt="eazel_logo_white (1)" src="https://user-images.githubusercontent.com/46320390/181726029-3eaa7a42-4107-47ef-ad0e-9de54f41024b.png">
+
+<img alt="스크린샷 2022-07-29 오후 6 48 37" src="https://user-images.githubusercontent.com/46320390/181733406-e586f741-717d-4f79-871e-bdea6d33b8c2.png">
+
+
 
 ## Table of Contents
 
