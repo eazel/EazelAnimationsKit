@@ -15,11 +15,9 @@ protocol EmergingButtonAnimator: UIButton {
 extension EmergingButtonAnimator {
     func animateWithExpansion(isButtonSelected: Bool, duration: ExpandAnimationDuration) {
         DispatchQueue.main.async {
-            guard self == self else { return }
             UIView.animate(withDuration: duration.startAnimation, animations: {
                 self.transform = (self.transform.scaledBy(x: 0.1, y: 0.1))
             }, completion: { _ in
-                guard self == self else { return }
                 UIView.animate(withDuration: duration.finishAnimation, animations: {
                     self.isSelected = isButtonSelected
                     self.transform = CGAffineTransform.identity
@@ -47,7 +45,6 @@ extension EmergingButtonAnimator {
             UIView.animate(withDuration: duration.startAnimation, delay: 0.09, options: .curveEaseIn, animations: {
                 overlappingImage.transform = CGAffineTransform.identity
             }, completion: { _ in
-                guard self == self else { return }
                 UIView.animate(withDuration: duration.finishAnimation) {
                     self.isSelected = isSelected
                     overlappingImage.removeFromSuperview()
