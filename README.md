@@ -121,6 +121,8 @@ Please note that we will review the code style as well together with the efficie
 
 Everybody is welcome for the contributions!
 
+[Example of PR](https://github.com/eazel/EazelAnimationsKit/pull/3)
+
 ## Authors
  
 - [msk-psp](https://github.com/msk-psp) , vibrio0102@gmail.com
