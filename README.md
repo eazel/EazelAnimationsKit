@@ -1,11 +1,15 @@
 # EazelAnimationsKit
+<img alt="eazel_logo_white (1)" src="https://user-images.githubusercontent.com/46320390/181726029-3eaa7a42-4107-47ef-ad0e-9de54f41024b.png">
+
+## Table of Contents
+
 
 1. [Introduction](#introduction)
 2. [Animations](#animations)
 3. [Usage](#usage)
 4. [Installation](#installation)
 5. [Contribution](#contribution)
-6. [Author](#author)
+6. [Authors](#authors)
 
 ## Introduction 
 
@@ -13,7 +17,7 @@ The drive for developing this animation SDK from iOS team at eazel's was taken f
 
 / *Bringing global art world to the comfort of your home* / 
 
-However, if we paraphrase it a bit, we can get the main idea from dev team:
+However, if we paraphrase it a bit:
 
 / *Bringing global animation world to the comfort of your repository* /
 
@@ -29,7 +33,12 @@ So far, we have two different animations for UIButton aka *EmergingButton* or *P
 
 1. .expandAnimation:
 
+![expand](https://user-images.githubusercontent.com/46320390/181723163-22abc267-da8d-48bf-b4e3-b9c964eb1d13.gif)
+
+
 2. .fillUpAnimation
+
+![fillUp](https://user-images.githubusercontent.com/46320390/181723587-abd32ddf-cbba-46aa-93ef-674b9b169eb1.gif)
 
 
 ## Usage
@@ -39,20 +48,23 @@ So far, we have two different animations for UIButton aka *EmergingButton* or *P
 1. You need to create your button programmatically, and make it a type of EmergingButton, and pass images for selected and unselected states as constructor parameters.
 
 ```swift
-    var expandableButton: EmergingButton = EmergingButton(frame: .zero,
-                                                                 unselectedImage: UIImage(named: "btn_bookmark"),
-                                                                 selectedImage: UIImage(named: "btn_bookmark_on"))
+var expandableButton: EmergingButton = EmergingButton(unselectedImage: UIImage(named: "btn_bookmark"),
+                                                      selectedImage: UIImage(named: "btn_bookmark_on"))
 ```
 2. Then, in your target function, you can choose the animation type with speed type by simple .animate command.
 
 ```swift
-        expandableButton.animate(with: .expandAnimation(isSelected: !expandableButton.isSelected, duration: .fast)) // for expand animation with fast duration
+expandableButton.animate(with: .expandAnimation(isSelected: !expandableButton.isSelected, duration: .fast))
+// for expand animation with fast duration
         
-        expandableButton.animate(with: .expandAnimation(isSelected: !expandableButton.isSelected, duration: .slow)) // for expand animation with slow duration
+expandableButton.animate(with: .expandAnimation(isSelected: !expandableButton.isSelected, duration: .slow))
+// for expand animation with slow duration
         
-        expandableButton.animate(with: .fillUpAnimation(isSelected: !expandableButton.isSelected, duration: .fast)) // for fill up animation with fast duration
+expandableButton.animate(with: .fillUpAnimation(isSelected: !expandableButton.isSelected, duration: .fast))
+// for fill up animation with fast duration
         
-        expandableButton.animate(with: .fillUpAnimation(isSelected: !expandableButton.isSelected, duration: .slow)) // for fill up animation with slow duration
+expandableButton.animate(with: .fillUpAnimation(isSelected: !expandableButton.isSelected, duration: .slow)) 
+// for fill up animation with slow duration
 ```
 Since EmergingButton is a child of UIButton, it inherits all of the default instances and functions that regular UIButton includes, such as .addTarget.
 
@@ -61,16 +73,17 @@ Since EmergingButton is a child of UIButton, it inherits all of the default inst
 1. You need to create your button programmatically, and make it a type of PreEmergingButton, and pass images for selected and unselected states as constructor parameters.
 
 ```swift
-    var expandableButton: PreEmergingButton = PreEmergingButton(frame: .zero,
-                                                                 unselectedImage: UIImage(named: "btn_bookmark"),
-                                                                 selectedImage: UIImage(named: "btn_bookmark_on"))
+var expandableButton: PreEmergingButton = PreEmergingButton(unselectedImage: UIImage(named: "btn_bookmark"),
+                                                            selectedImage: UIImage(named: "btn_bookmark_on"))
 ```
 2. Then, in your target function, you can choose the animation type with custom speed type by simple .animate command.
 
 ```swift
-        expandableButton.animate(with: .expandAnimation(isSelected: !ovelappingButton.isSelected, duration: .init(startAnimating: 0.3, finishAnimating: 0.5))) // startAnimating is the duration of first animation until it changes the state finishAnimating is the duration of last animation after button changed the state
+expandableButton.animate(with: .expandAnimation(isSelected: !ovelappingButton.isSelected, duration: .init(startAnimating: 0.3, finishAnimating: 0.5)))
+// startAnimating is the duration of first animation until it changes the state finishAnimating is the duration of last animation after button changed the state
         
-        expandableButton.animate(with: .fillUpAnimation(isSelected: !ovelappingButton.isSelected, duration: .init(startAnimating: 0.3, finishAnimating: 0.5))) // startAnimating is the duration of first animation until it changes the state finishAnimating is the duration of last animation after button changed the state
+expandableButton.animate(with: .fillUpAnimation(isSelected: !ovelappingButton.isSelected, duration: .init(startAnimating: 0.3, finishAnimating: 0.5)))
+// startAnimating is the duration of first animation until it changes the state finishAnimating is the duration of last animation after button changed the state
 ```
 Since PreEmergingButton is a child of UIButton, it inherits all of the default instances and functions that regular UIButton includes, such as .addTarget.
 
@@ -108,7 +121,7 @@ Please note that we will review the code style as well together with the efficie
 
 Everybody is welcome for the contributions!
 
-## Author
+## Authors
  
 - [msk-psp](https://github.com/msk-psp) , vibrio0102@gmail.com
 - [yermukhanbet](https://github.com/yermukhanbet) , y.yesen.y@gmail.com
