@@ -21,7 +21,7 @@ However, if we paraphrase it a bit:
 
 / *Bringing global animation world to the comfort of your repository* /
 
-If you're fancy UI lover, you may know that developing beatiful UI is easier said than done. From your busy schedule to endless new features to develop, limitations in time can make it difficult for you to indulge in UI animations as much as you'd like.
+If you're fancy UI lover, you may know that developing beautiful UI is easier said than done. From your busy schedule to endless new features to develop, limitations in time can make it difficult for you to indulge in UI animations as much as you'd like.
 
 Eazel iOS team works to change that. We have created beatiful and easily scalable EazelAnimationsKit, providing you with fast and easy access to different kind of animations, bringing the animations world to the comfort of your own repository.
 
