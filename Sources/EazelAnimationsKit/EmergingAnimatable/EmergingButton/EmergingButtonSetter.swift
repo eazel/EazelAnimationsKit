@@ -10,6 +10,7 @@ import UIKit
 protocol EmergingButtonSetter: UIButton {
     var imageForNormalState: UIImage? { get set }
     var imageForSelectedState: UIImage? { get set }
+    var imageContentMode: UIView.ContentMode { get set }
     
     func setImages()
 }
@@ -31,6 +32,6 @@ extension EmergingButtonSetter {
         self.setImage(imageForSelectedState, for: .selected)
         self.setImage(imageForSelectedState, for: UIControl.State(rawValue: 5))
         
-        self.imageView?.contentMode = .scaleToFill
+        self.imageView?.contentMode = self.imageContentMode
     }
 }

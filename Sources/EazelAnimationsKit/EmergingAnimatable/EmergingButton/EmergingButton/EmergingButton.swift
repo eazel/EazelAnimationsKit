@@ -11,12 +11,15 @@ public class EmergingButton: UIButton, EmergedButton {
     
     var imageForNormalState: UIImage?
     var imageForSelectedState: UIImage?
+    var imageContentMode: UIView.ContentMode
     
     public init(frame: CGRect = .zero,
          unselectedImage: UIImage? = nil,
-         selectedImage: UIImage? = nil) {
+         selectedImage: UIImage? = nil,
+         contentMode: UIView.ContentMode = .scaleAspectFit) {
         self.imageForNormalState = unselectedImage
         self.imageForSelectedState = selectedImage
+        self.imageContentMode = contentMode
         
         super.init(frame: frame)
         
