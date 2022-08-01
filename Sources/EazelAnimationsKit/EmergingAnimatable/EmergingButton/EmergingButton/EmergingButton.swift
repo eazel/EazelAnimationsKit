@@ -16,7 +16,7 @@ public class EmergingButton: UIButton, EmergedButton {
     public init(frame: CGRect = .zero,
          unselectedImage: UIImage? = nil,
          selectedImage: UIImage? = nil,
-         contentMode: UIView.ContentMode) {
+         contentMode: UIView.ContentMode = .scaleAspectFit) {
         self.imageForNormalState = unselectedImage
         self.imageForSelectedState = selectedImage
         self.imageContentMode = contentMode
