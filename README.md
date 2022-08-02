@@ -1,5 +1,7 @@
 # EazelAnimationsKit
-<img alt="eazel_logo_white (1)" src="https://user-images.githubusercontent.com/46320390/181726029-3eaa7a42-4107-47ef-ad0e-9de54f41024b.png">
+
+![Frame (1)](https://user-images.githubusercontent.com/46320390/181734422-c3d1dfbd-29ce-4d7c-84bd-66aa05e2d885.png)
+
 
 ## Table of Contents
 
