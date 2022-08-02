@@ -11,12 +11,15 @@ import UIKit
 
 class EmergingButtonAnimatorOverlappingImageTests: XCTestCase {
     class TestEmergingButtonAnimatorButton: UIButton, EmergedButton {
+        var imageContentMode: UIView.ContentMode
+        
         var imageForNormalState: UIImage?
         var imageForSelectedState: UIImage?
         
-        init(selectedImage: UIImage?, unselectedImage: UIImage?) {
+        init(selectedImage: UIImage?, unselectedImage: UIImage?, contentMode: UIView.ContentMode) {
             self.imageForNormalState = unselectedImage
             self.imageForSelectedState = selectedImage
+            self.imageContentMode = contentMode
             
             super.init(frame: .zero)
             
@@ -29,13 +32,14 @@ class EmergingButtonAnimatorOverlappingImageTests: XCTestCase {
     }
     
     func testOverlappingImageReturnsSelectedImage() throws {
-        let set = TestEmergingButtonAnimatorButton(selectedImage: UIImage.getImage(named: "flower_on"), unselectedImage: UIImage.getImage(named: "flower_off"))
+        let set = TestEmergingButtonAnimatorButton(selectedImage: UIImage.getImage(named: "flower_on"), unselectedImage: UIImage.getImage(named: "flower_off"),
+                                                   contentMode: .scaleAspectFit)
         let selectedImageToOverlap = set.getOverlappingImage(for: .selected)
         XCTAssertTrue(selectedImageToOverlap.image == set.image(for: .selected))
     }
     
     func testOverlappingImageReturnsUnselectedImage() throws {
-        let set = TestEmergingButtonAnimatorButton(selectedImage: UIImage.getImage(named: "flower_on"), unselectedImage: UIImage.getImage(named: "flower_off"))
+        let set = TestEmergingButtonAnimatorButton(selectedImage: UIImage.getImage(named: "flower_on"), unselectedImage: UIImage.getImage(named: "flower_off"),contentMode: .scaleAspectFit)
         let selectedImageToOverlap = set.getOverlappingImage(for: .normal)
         XCTAssertTrue(selectedImageToOverlap.image == set.image(for: .normal))
     }
