@@ -14,8 +14,8 @@ public class PreEmergingButton: UIButton, PreEmergedButton {
     var imageContentMode: UIView.ContentMode
     
     public init(frame: CGRect = .zero,
-         unselectedImage: UIImage? = nil,
-         selectedImage: UIImage? = nil,
+                unselectedImage: UIImage? = nil,
+                selectedImage: UIImage? = nil,
                 contentMode: UIView.ContentMode = .scaleAspectFit) {
         self.imageForNormalState = unselectedImage
         self.imageForSelectedState = selectedImage
